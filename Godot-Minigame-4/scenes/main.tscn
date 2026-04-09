@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bljxf08q262h5"]
+[gd_scene format=3 uid="uid://bljxf08q262h5"]
 
 [ext_resource type="PackedScene" uid="uid://dyj54usnh5n82" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dn7ae06yhyubs" path="res://scenes/level.tscn" id="2_0wfyh"]
@@ -8,43 +8,60 @@
 [sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
 font_size = 30
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" unique_id=693223576]
 
-[node name="Player" parent="." instance=ExtResource("1_o5qli")]
+[node name="Player" parent="." unique_id=2101187307 instance=ExtResource("1_o5qli")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2401273, 6.084159)
 
-[node name="Camera3D" type="Camera3D" parent="Player"]
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=237933409]
 transform = Transform3D(1, 0, 0, 0, 0.83821404, 0.5453415, 0, -0.5453415, 0.83821404, 2.5563685e-07, 2.7700665, 2.0122786)
 
-[node name="Level" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Level" parent="." unique_id=809616792 instance=ExtResource("2_0wfyh")]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=188552187]
 transform = Transform3D(1, 0, 0, 0, 0.3097971, 0.9508027, 0, -0.9508027, 0.3097971, 0, 2.806101, 0)
 
-[node name="NPC" parent="." instance=ExtResource("3_sugp2")]
+[node name="NPC" parent="." unique_id=1347418276 instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9940548, 1.5117404, -4.794055)
+throwFrequency = 4.0
 
-[node name="UI" type="BoxContainer" parent="."]
+[node name="NPC" parent="NPC" unique_id=1510047879 instance=ExtResource("3_sugp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.235317, 0.03968692, -1.970532)
+throwFrequency = 3.0
+
+[node name="UI" type="BoxContainer" parent="." unique_id=999209271]
 offset_right = 323.0
 offset_bottom = 84.0
 
-[node name="Header" type="Label" parent="UI"]
+[node name="Header" type="Label" parent="UI" unique_id=475708909]
 layout_mode = 2
 text = "points: "
 label_settings = SubResource("LabelSettings_jyhfs")
 
-[node name="PointsLabel" type="Label" parent="UI"]
+[node name="PointsLabel" type="Label" parent="UI" unique_id=1404715036]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_jyhfs")
 
-[node name="Ball" parent="." instance=ExtResource("4_jyhfs")]
+[node name="Ball" parent="." unique_id=1160191622 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.032008, 0.75, 5.703159)
 
-[node name="Ball2" parent="." instance=ExtResource("4_jyhfs")]
+[node name="Ball2" parent="." unique_id=1455219843 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8009377, 0.75, 5.9645324)
 
-[node name="Ball3" parent="." instance=ExtResource("4_jyhfs")]
+[node name="Ball3" parent="." unique_id=366660001 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5218492, 0.75, 7.0957203)
+
+[node name="Ball4" parent="." unique_id=1204331568 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8889927, 0.75, 6.6303177)
+
+[node name="Ball5" parent="." unique_id=177216271 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5680661, 0.75, 8.020137)
+
+[node name="Ball6" parent="." unique_id=1642201200 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0097358, 0.75, 7.8201437)
+
+[node name="Ball7" parent="." unique_id=2064145392 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.96309507, 0.75, 2.0740805)
